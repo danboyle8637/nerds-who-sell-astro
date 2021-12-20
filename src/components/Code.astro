@@ -1,0 +1,28 @@
+---
+import { Markdown } from 'astro/components';
+import { Code } from 'astro/components';
+
+const code = `
+  cosnt cat = "Nike"
+  
+  const func = () => {
+    console.log(cat)
+  }
+`
+---
+
+  <style>
+    .code {
+      padding: 60px;
+    }
+  </style>
+
+  <Markdown>
+    # Headline
+
+    - list 1
+    - list 2
+    - list 3
+
+    <Code code={code} lang="ts" wrap theme="material-palenight" />
+  </Markdown>

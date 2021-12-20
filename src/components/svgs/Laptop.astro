@@ -1,0 +1,48 @@
+---
+export interface Props {
+  width?: string
+  height?: string
+}
+
+const { width, height } = Astro.props
+---
+
+<style>
+  .laptop {
+    fill: var(--laptop-color, hsl(225, 32%, 16%));
+    stroke: var(--laptop-color, hsl(225, 32%, 16%));
+  }
+</style>  
+
+<svg
+  viewbox="0 0 575 335"
+  width={width}
+  height={height}
+  xmlns="http://www.w3.org/2000/svg"
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  stroke-linecap="round"
+  stroke-miterlimit="1.5"
+>
+  <path id="laptop-container" fill="none" d="M0 0h574.993v334.354H0z" />
+  <clipPath id="body_clip1">
+    <path d="M0 0h574.993v334.354H0z" />
+  </clipPath>
+  <g class="laptop" clip-path="url(#body_clip1)">
+    <path
+      id="body"
+      d="M499.444 331.746h-424.3v-.027c-4.951-.138-26.935-.795-38.362-1.932-20.905-2.079-33.356-6.924-33.356-6.924v-10.409H571.3v10.409s-12.452 4.845-33.356 6.924c-11.537 1.147-33.835 1.807-38.5 1.935v.024Z"
+    />
+    <path
+      d="M510.205 20.406c0-5.523-4.477-10-10-10H73.492c-5.523 0-10 4.477-10 10V306.46h446.713V20.406Z"
+      fill="none"
+      stroke-width="12.5"
+    />
+    <path
+      d="M68.111 10.406H504.91v13.813H68.111z"
+    />
+    <path
+      d="M68.963 295.519h436.799v10.941H68.963z"
+    />
+  </g>
+</svg>

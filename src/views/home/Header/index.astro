@@ -1,0 +1,66 @@
+---
+import VerticalIphone from '../../../components/svgs/VerticalIphoneOutline.astro'
+import Laptop from '../../../components/svgs/Laptop.astro'
+import NerdsLogo from '../../../components/images/NerdsWhoSellLogo.astro'
+import Headline from './Headline.astro'
+---
+
+<style>
+  section {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .content-container {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .device-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    justify-items: center;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .iphone {
+    width: 140px;
+    transform: translate(10px, -70px);
+  }
+
+  .laptop {
+    width: 800px;
+    transform: translate(0px, -70px);
+  }
+</style>
+
+<section>
+  <div class="content-container">
+    <NerdsLogo />
+    <Headline />
+  </div>
+  <div class="device-container"> 
+    <div class="iphone">
+      <VerticalIphone />
+    </div>
+    <div class="laptop">
+      <Laptop />
+    </div>
+  </div>
+</section>

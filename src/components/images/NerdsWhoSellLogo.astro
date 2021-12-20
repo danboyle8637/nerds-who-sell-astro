@@ -1,0 +1,69 @@
+---
+import TheNerd from './NerdsWhoRockLaptops.astro'
+import Nerds from './Nerds.astro'
+import Who from './Who.astro'
+import Sell from './Sell.astro'
+---
+
+<style>
+  .logo-container {
+    align-self: flex-start;
+    position: relative;
+    width: 250px;
+    transform: translateX(-10px);
+  }
+
+  .nerd-logo {
+    width: 142px;
+    line-height: 0;
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: grid;
+    grid-template-areas:
+      "nerds nerds"
+      "who sell";
+    gap: 0px;
+    width: 130px;
+    transform: translate(10px, 22px);
+  }
+
+  .nerds {
+    grid-area: nerds;
+    padding-left: 12px;
+    width: 130px;
+    line-height: 0;
+  }
+
+  .who {
+    grid-area: who;
+    width: 80px;
+    line-height: 0;
+  }
+
+  .sell {
+    grid-area: sell;
+    width: 72px;
+    line-height: 0;
+  }
+</style>
+
+<div class="logo-container">
+  <div class="nerd-logo">
+    <TheNerd />
+  </div>
+  <div class="container">
+    <div class="nerds">
+      <Nerds />
+    </div>
+    <div class="who">
+      <Who />
+    </div>
+    <div class="sell">
+      <Sell />
+    </div>
+  </div>
+</div>
